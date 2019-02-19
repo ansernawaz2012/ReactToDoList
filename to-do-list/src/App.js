@@ -70,17 +70,21 @@ onClick(index) {
 
     return (
       <div className="App">
+      <div className = "list">
         <h1>To Do List</h1>
         <input type="text" id="listItem" placeholder="Add Item" />
         <button type="button" onClick={()=>this.addItem()}>Add</button>
-        <ul>
+        <ul className="toDoList">
           {listItems}
         </ul>
+        </div>
+        <div className = "list">
         <h1>Completed List</h1>
-        <ul>
+        <ul className = "completedList">
           {/* {this.state.completedList} */}
         {newCompletedList}
         </ul>
+        </div>
       </div>
     );
   }
